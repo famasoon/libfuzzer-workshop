@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 import os
 import subprocess
 
@@ -19,7 +19,7 @@ for f in corpus_filenames:
   process = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                              stderr=subprocess.STDOUT)
   output = process.communicate()[0]
-  if not checkOutput(output):
-    print testcase_path
-    print output
-    print '-' * 80
+  if not checkOutput(str(output)):
+    print(testcase_path)
+    print(output)
+    print('-' * 80)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 import os
 import random
 
@@ -14,7 +14,7 @@ if not os.path.exists(corpus_dir):
 
 seed_corpus_filenames = os.listdir('seed_corpus')
 
-for i in xrange(1000):
+for i in range(1000):
   random_seed_filename = random.choice(seed_corpus_filenames)
   random_seed_filename = os.path.join('seed_corpus', random_seed_filename)
   output_filename = os.path.join(WORK_DIR, 'corpus', 'testcase-%06d' % i)
